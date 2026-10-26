@@ -29,7 +29,12 @@ tr.hitrow td.n,tr.hitrow td.t{color:var(--live)}tr.hitrow a,td.s a{color:inherit
 .tag{display:inline-block;font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;padding:1px 6px;border:1.5px solid currentColor;border-radius:4px;vertical-align:middle;margin-left:6px}
 tr.hitrow.test td{border-style:dashed}tr.hitrow td.s.live{font-size:1rem}
 td.na{background:repeating-linear-gradient(45deg,transparent 0 6px,var(--line) 6px 7px)}
-td.n{color:var(--mute);white-space:normal;min-width:260px;max-width:560px;font-size:.8rem;line-height:1.3}
+td.n,th.n{position:sticky;right:0;background:var(--card);box-shadow:-6px 0 8px -6px rgba(0,0,0,.35);z-index:1}
+th.n{z-index:2}
+td.t,th.t{position:sticky;left:0;background:var(--card);z-index:1;box-shadow:6px 0 8px -6px rgba(0,0,0,.35)}
+th.t{z-index:2}
+tr.hitrow td.n,tr.hitrow td.t{background:var(--livebg)}
+td.n{color:var(--mute);white-space:normal;min-width:260px;max-width:min(560px,45vw);font-size:.8rem;line-height:1.3}
 td.n .note{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--mute);font-size:.8rem}
 .legend code{font-family:var(--mono)}
@@ -67,7 +72,7 @@ a{color:var(--accent)}
 <div class="card none"><div class="name">GameStop (2nd listing)</div><div class="state">Not available</div><div class="when">checked Oct 25, 9:29 PM</div></div></section>
 <div class="legend"><span><code>—</code> not available from the store itself</span><span><code>LIVE</code> first-party stock found</span><span><code>cand.</code> search hit, verifying</span><span><code>wall</code> Target human check blocking reads</span><span><code>err</code> check failed</span><span>striped = not checked that tick</span></div>
 <div class="wrap"><table>
-<thead><tr><th>Time</th><th>Target</th><th>Target search</th><th>Costco</th><th>Costco Same-Day</th><th>Walmart</th><th>Walmart search</th><th>Best Buy</th><th>Best Buy search</th><th>GameStop</th><th>GameStop (2nd listing)</th><th>Notes</th></tr></thead>
+<thead><tr><th class="t">Time</th><th>Target</th><th>Target search</th><th>Costco</th><th>Costco Same-Day</th><th>Walmart</th><th>Walmart search</th><th>Best Buy</th><th>Best Buy search</th><th>GameStop</th><th>GameStop (2nd listing)</th><th class="n">Notes</th></tr></thead>
 <tbody>
 <tr><td class="t">Oct 25, 9:29 PM</td><td class="na"></td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="na"></td><td class="s none" title="not live">—</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n"><span class="note" title="Target skipped (tick 16). GameStop both $99.99; 449048 add-to-cart not active this pass. Walmart marketplace $132.99+. Best Buy no matches.">Target skipped (tick 16). GameStop both $99.99; 449048 add-to-cart not active this pass. Walmart marketplace $132.99+. Best Buy no matches.</span></td></tr>
 <tr><td class="t">Oct 25, 9:26 PM</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="na"></td><td class="s none" title="not live">—</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s cand" title="candidate"><a href="https://www.gamestop.com/toys-games/trading-cards/products/pokemon-trading-card-game-30th-celebration-elite-trainer-box/449048.html" target="_blank" rel="noopener">cand. &rarr;</a></td><td class="n"><span class="note" title="GameStop 449048 In Stock, Add to Cart enabled, New, ship 2-3 days, $99.99 + $14.99 ship (over $80 ceiling, not alerted). Walmart marketplace $132.99+. Target real AddToCart disabled.">GameStop 449048 In Stock, Add to Cart enabled, New, ship 2-3 days, $99.99 + $14.99 ship (over $80 ceiling, not alerted). Walmart marketplace $132.99+. Target real AddToCart disabled.</span></td></tr>
@@ -86,5 +91,5 @@ a{color:var(--accent)}
 <tr><td class="t">Oct 25, 8:06 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n"><span class="note" title=""></span></td></tr>
 <tr><td class="t">Oct 25, 8:03 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n"><span class="note" title="Target sold out, $69.99, signed in">Target sold out, $69.99, signed in</span></td></tr>
 </tbody></table></div>
-<footer>Page rebuilt Oct 25, 9:31 PM Central. Marketplace listings from third-party sellers are not counted as stock. Updated about every 3 hours while the watch runs.</footer>
+<footer>Page rebuilt Oct 25, 9:32 PM Central. Marketplace listings from third-party sellers are not counted as stock. Updated about every 3 hours while the watch runs.</footer>
 </main>
