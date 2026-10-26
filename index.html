@@ -29,6 +29,13 @@ td.n{color:var(--mute);white-space:normal;min-width:220px}
 .legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--mute);font-size:.8rem}
 .legend code{font-family:var(--mono)}
 footer{color:var(--mute);font-size:.8rem}
+.hit{border:3px solid var(--live);background:var(--livebg);border-radius:12px;padding:22px 20px;display:grid;gap:10px;animation:throb 1.2s ease-in-out infinite}
+.hit.past{border-color:var(--warn);background:var(--warnbg);animation:none}
+.hit-eyebrow{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--live)}.hit.past .hit-eyebrow{color:var(--warn)}
+.hit-store{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(1.6rem,6vw,3rem);line-height:1.1;color:var(--fg);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;word-break:break-word}
+.hit-when{color:var(--mute);font-size:.9rem}
+@keyframes throb{0%,100%{box-shadow:0 0 0 0 var(--live)}50%{box-shadow:0 0 0 10px transparent}}
+@media (prefers-reduced-motion: reduce){.hit{animation:none}}
 a{color:var(--accent)}
 </style>
 <main>
@@ -36,6 +43,7 @@ a{color:var(--accent)}
 <h1>ETB Watch Log</h1>
 <p class="sub">Pokémon TCG 30th Celebration Elite Trainer Box. Online stock checks across the stores below, from a browser in Tennessee. Times are Central.</p>
 </header>
+
 <div class="kpis">
 <div class="kpi"><b>13</b><span>checks</span></div>
 <div class="kpi"><b>0</b><span>hits</span></div>
@@ -66,5 +74,5 @@ a{color:var(--accent)}
 <tr><td class="t">Oct 25, 8:06 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n"></td></tr>
 <tr><td class="t">Oct 25, 8:03 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n">Target sold out, $69.99, signed in</td></tr>
 </tbody></table></div>
-<footer>Page rebuilt Oct 25, 9:08 PM Central. Marketplace listings from third-party sellers are not counted as stock. Updated about every 3 hours while the watch runs.</footer>
+<footer>Page rebuilt Oct 25, 9:16 PM Central. Marketplace listings from third-party sellers are not counted as stock. Updated about every 3 hours while the watch runs.</footer>
 </main>
