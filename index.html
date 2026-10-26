@@ -1,0 +1,70 @@
+<title>ETB Watch Log</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+/* Layout: a status strip of store cards, then one dense table, newest first. */
+:root{--bg:#f7f6f2;--fg:#1d1c1a;--mute:#6b675f;--line:#dcd8cf;--card:#fffdf8;--live:#1f7a3a;--livebg:#dff3e4;--warn:#9a5b00;--warnbg:#fbeccc;--cand:#1a5fb4;--candbg:#dde9fb;--accent:#b3261e;
+ --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16161a;--fg:#ececec;--mute:#a09c94;--line:#33323a;--card:#1f1f25;--live:#5fd17f;--livebg:#163d24;--warn:#f0b35b;--warnbg:#3d2d10;--cand:#7fb0f5;--candbg:#162a48;--accent:#ff6b61;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16161a;--fg:#ececec;--mute:#a09c94;--line:#33323a;--card:#1f1f25;--live:#5fd17f;--livebg:#163d24;--warn:#f0b35b;--warnbg:#3d2d10;--cand:#7fb0f5;--candbg:#162a48;--accent:#ff6b61;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.45;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+main{max-width:1100px;margin:0 auto;display:grid;gap:22px}
+h1{font-size:1.55rem;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--mute);margin:4px 0 0}
+.kpis{display:flex;flex-wrap:wrap;gap:18px 28px;font-variant-numeric:tabular-nums}
+.kpi b{display:block;font-size:1.35rem;font-family:var(--mono);font-weight:600}
+.kpi span{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-width:0}
+.card.live{border-color:var(--live);background:var(--livebg)}.card.warn{border-color:var(--warn);background:var(--warnbg)}.card.cand{border-color:var(--cand);background:var(--candbg)}
+.card .name{font-weight:600}.card .state{font-family:var(--mono);font-size:.85rem;margin-top:2px}.card .when{color:var(--mute);font-size:.78rem;margin-top:4px}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.86rem}
+th,td{padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);position:sticky;top:0;background:var(--card)}
+td.t{font-family:var(--mono)}td.s{font-family:var(--mono);text-align:center;color:var(--mute)}
+td.s.live{color:var(--live);background:var(--livebg);font-weight:700}td.s.warn{color:var(--warn);background:var(--warnbg)}td.s.cand{color:var(--cand);background:var(--candbg)}
+td.na{background:repeating-linear-gradient(45deg,transparent 0 6px,var(--line) 6px 7px)}
+td.n{color:var(--mute);white-space:normal;min-width:220px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--mute);font-size:.8rem}
+.legend code{font-family:var(--mono)}
+footer{color:var(--mute);font-size:.8rem}
+a{color:var(--accent)}
+</style>
+<main>
+<header>
+<h1>ETB Watch Log</h1>
+<p class="sub">Pokémon TCG 30th Celebration Elite Trainer Box. Online stock checks across the stores below, from a browser in Tennessee. Times are Central.</p>
+</header>
+<div class="kpis">
+<div class="kpi"><b>13</b><span>checks</span></div>
+<div class="kpi"><b>0</b><span>hits</span></div>
+<div class="kpi"><b>Oct 25, 8:51 PM</b><span>last check</span></div>
+<div class="kpi"><b>Oct 25, 8:03 PM</b><span>watching since</span></div>
+</div>
+<section class="cards"><div class="card none"><div class="name">Target</div><div class="state">Not available</div><div class="when">checked Oct 25, 8:45 PM</div></div>
+<div class="card none"><div class="name">Costco</div><div class="state">Not available</div><div class="when">checked Oct 25, 8:51 PM</div></div>
+<div class="card none"><div class="name">Costco Same-Day</div><div class="state">Not available</div><div class="when">checked Oct 25, 8:51 PM</div></div>
+<div class="card none"><div class="name">Walmart</div><div class="state">Not available</div><div class="when">checked Oct 25, 8:51 PM</div></div>
+<div class="card none"><div class="name">Best Buy</div><div class="state">Not available</div><div class="when">checked Oct 25, 8:51 PM</div></div>
+<div class="card none"><div class="name">GameStop</div><div class="state">Not available</div><div class="when">checked Oct 25, 8:51 PM</div></div></section>
+<div class="legend"><span><code>—</code> not available from the store itself</span><span><code>LIVE</code> first-party stock found</span><span><code>cand.</code> search hit, verifying</span><span><code>wall</code> Target human check blocking reads</span><span><code>err</code> check failed</span><span>striped = not checked that tick</span></div>
+<div class="wrap"><table>
+<thead><tr><th>Time</th><th>Target</th><th>Costco</th><th>Costco Same-Day</th><th>Walmart</th><th>Best Buy</th><th>GameStop</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td class="t">Oct 25, 8:51 PM</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n">Walmart marketplace $89.99; Best Buy marketplace $170.95</td></tr>
+<tr><td class="t">Oct 25, 8:48 PM</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n"></td></tr>
+<tr><td class="t">Oct 25, 8:45 PM</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n"></td></tr>
+<tr><td class="t">Oct 25, 8:42 PM</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n"></td></tr>
+<tr><td class="t">Oct 25, 8:39 PM</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n"></td></tr>
+<tr><td class="t">Oct 25, 8:36 PM</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n">Target wall cleared by user</td></tr>
+<tr><td class="t">Oct 25, 8:32 PM</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n"></td></tr>
+<tr><td class="t">Oct 25, 8:27 PM</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n"></td></tr>
+<tr><td class="t">Oct 25, 8:24 PM</td><td class="s warn" title="captcha">wall</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n">Target press-and-hold wall appeared; Same-Day tab added</td></tr>
+<tr><td class="t">Oct 25, 8:21 PM</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="na"></td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="s none" title="not live">—</td><td class="n">Walmart and Best Buy marketplace sellers only; GameStop unavailable</td></tr>
+<tr><td class="t">Oct 25, 8:09 PM</td><td class="s warn" title="error">err</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n">Chrome devtools connection dropped; reconnected later</td></tr>
+<tr><td class="t">Oct 25, 8:06 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n"></td></tr>
+<tr><td class="t">Oct 25, 8:03 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n">Target sold out, $69.99, signed in</td></tr>
+</tbody></table></div>
+<footer>Page rebuilt Oct 25, 9:08 PM Central. Marketplace listings from third-party sellers are not counted as stock. Updated about every 3 hours while the watch runs.</footer>
+</main>
