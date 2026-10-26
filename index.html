@@ -24,6 +24,8 @@ th,td{padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap;te
 th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);position:sticky;top:0;background:var(--card)}
 td.t{font-family:var(--mono)}td.s{font-family:var(--mono);text-align:center;color:var(--mute)}
 td.s.live{color:var(--live);background:var(--livebg);font-weight:700}td.s.warn{color:var(--warn);background:var(--warnbg)}td.s.cand{color:var(--cand);background:var(--candbg)}
+tr.hitrow td{background:var(--livebg);font-weight:800;color:var(--live);border-top:2px solid var(--live);border-bottom:2px solid var(--live)}
+tr.hitrow td.n,tr.hitrow td.t{color:var(--live)}tr.hitrow td.s.live{font-size:1rem}
 td.na{background:repeating-linear-gradient(45deg,transparent 0 6px,var(--line) 6px 7px)}
 td.n{color:var(--mute);white-space:normal;min-width:220px}
 .legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--mute);font-size:.8rem}
@@ -32,7 +34,7 @@ footer{color:var(--mute);font-size:.8rem}
 .hit{border:3px solid var(--live);background:var(--livebg);border-radius:12px;padding:22px 20px;display:grid;gap:10px;animation:throb 1.2s ease-in-out infinite}
 .hit.past{border-color:var(--warn);background:var(--warnbg);animation:none}
 .hit-eyebrow{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--live)}.hit.past .hit-eyebrow{color:var(--warn)}
-.hit-store{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(1.6rem,6vw,3rem);line-height:1.1;color:var(--fg);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;word-break:break-word}
+.hit-store{display:block;font-family:var(--mono);font-weight:800;font-size:clamp(1.6rem,6vw,3rem);line-height:1.1;color:var(--live);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;word-break:break-word}
 .hit-when{color:var(--mute);font-size:.9rem}
 @keyframes throb{0%,100%{box-shadow:0 0 0 0 var(--live)}50%{box-shadow:0 0 0 10px transparent}}
 @media (prefers-reduced-motion: reduce){.hit{animation:none}}
@@ -74,5 +76,5 @@ a{color:var(--accent)}
 <tr><td class="t">Oct 25, 8:06 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n"></td></tr>
 <tr><td class="t">Oct 25, 8:03 PM</td><td class="s none" title="not live">—</td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="na"></td><td class="n">Target sold out, $69.99, signed in</td></tr>
 </tbody></table></div>
-<footer>Page rebuilt Oct 25, 9:16 PM Central. Marketplace listings from third-party sellers are not counted as stock. Updated about every 3 hours while the watch runs.</footer>
+<footer>Page rebuilt Oct 25, 9:17 PM Central. Marketplace listings from third-party sellers are not counted as stock. Updated about every 3 hours while the watch runs.</footer>
 </main>
